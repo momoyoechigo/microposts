@@ -1,8 +1,7 @@
-<h1>Edit</h1>
+<h1>Change of profile</h1>
 
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-        <p>Edit</p>
         <%= form_for(@user) do |f| %>
             <%= render 'shared/error_messages', object: f.object %>
     
@@ -11,6 +10,12 @@
         
             <%= f.label :email %>
             <%= f.text_field :email %>
+            
+            <%= f.label :profile %>
+            <%= f.text_field :profile %>
+            
+            <%= f.label :area %>
+            <%= f.text_field :area %>
         
             <%= f.label :password %>
             <%= f.password_field :password %>
