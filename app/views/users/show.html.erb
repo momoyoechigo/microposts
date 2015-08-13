@@ -3,11 +3,15 @@
         <h1><%= gravatar_for @user %>
         <%= @user.name %></h1>
         
-        <% if @user.profile %>
-            <%= @user.profile %>
+        <% if @user.profile.present? %>
+            <p>プロフィール:<%= @user.profile %></p>
+        <% else %>
+            <p>プロフィール:設定されていません</p>
         <% end %>
-        <% if @user.area %>
-            <%= @user.area %>
+        <% if @user.area.present? %>
+            <p>エリア:<%= @user.area %></p>
+        <% else %>
+            <p>エリア:設定されていません</p>
         <% end %>
     
         <p><%= link_to "Change of profile", edit_user_path, class: "btn btn-primary" %></p>
