@@ -1,0 +1,39 @@
+<% if logged_in? %>
+    <div class="row">
+         <aside class="col-md-4">
+            <section class="user_info">
+                 <%= render 'shared/user_info' %>
+            </section>
+            <ul class="list-unstyled list-inline mt20">
+                <li><%= link_to "followings", followings_user_path(@user), class: "btn btn-primary btn-info" %></li>
+                <li><%= link_to "followers", followers_user_path(@user), class: "btn btn-primary btn-info" %></li>
+            </ul>
+        </aside>
+        <div class="col-md-8">
+        <h1>Followers</h1>
+            <div class="content">
+                <% @followers_users.each do |user| %>
+                    <div class="col-xs-12 col-md-8 mb20">
+                        <ul class="list-unstyled">
+                            <li><%= gravatar_for @user %></li>
+                            <li><p class="lead"><%= user.name %></p></li>
+                        </ul>
+                        <div>
+                            <strong>最近の投稿</strong>
+                            <% if user.last_post.present? %>
+                                <p><%= user.last_post.content %></p>
+                            <% else %>
+                                <p>投稿はありません</p>
+                            <% end %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+<% else %>
+    <div class="center jumpotron">
+        <h1>Welcome to the Microposts</h1>
+        <%= link_to "sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    </div>
+<% end %>

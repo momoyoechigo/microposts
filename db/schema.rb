@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20150814120628) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
+ActiveRecord::Schema.define(version: 20150812083055) do
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -45,5 +47,6 @@ ActiveRecord::Schema.define(version: 20150814120628) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
-
+  end
+  
 end
