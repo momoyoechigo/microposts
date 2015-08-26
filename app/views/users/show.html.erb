@@ -7,7 +7,10 @@
                 <p><%= link_to "profile edit", edit_user_path(@user) %></p>
             </h1>
         </section>
-    
+            <ul class="list-unstyled list-inline mt20">
+                <li><%= link_to "followings", followings_user_path(@user), class: "btn btn-primary btn-info" %></li>
+                <li><%= link_to "followers", followers_user_path(@user), class: "btn btn-primary btn-info" %></li>
+            </ul>
     </aside>
     <div class="col-md-8">
         <%= render 'follow_form' if logged_in? %>
