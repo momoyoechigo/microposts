@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
     validates :password, presence: true, length: { minimun:3, maximum: 50 }
     validates :password_confirmation, presence: true, length: { minimun:3, maximum: 50 }
     has_secure_password
+    mount_uploader :image, ImageUploader
     has_many :microposts
     has_many :following_relationships, class_name: "Relationship",
                                         foreign_key: "follower_id",

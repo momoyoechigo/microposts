@@ -1,11 +1,14 @@
 <li id="micropost-<%= micropost.id %>">
-    <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
-    <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
-    <span class="content"><%= micropost.content %></span>
-    <span class="timestamp">
-        posted <%= time_ago_in_words(micropost.created_at) %> ago.
-        <% if current_user == micropost.user %>
-            <%= link_to "delete", micropost, method: :delete, data: {confirm: "You sure?"} %>
-        <% end %>
-    </span>
+    <%= render partial: 'shared/user_image', locals: {user: micropost.user} %>
+        <div class="post_all mt20">
+            <p><%= link_to micropost.user.name, micropost.user %></p>
+            <p><%= micropost.content %></p>
+            <%= image_tag micropost.image.url.to_s %>
+        </div>
+        <span class="timestamp flc">
+            posted <%= time_ago_in_words(micropost.created_at) %> ago.
+            <% if current_user == micropost.user %>
+                <%= link_to "delete", micropost, method: :delete, data: {confirm: "You sure?"} %>
+    <% end %>
+        </span>
 </li>

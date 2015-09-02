@@ -193,3 +193,16 @@ span.picture {
 .mb20 { margin-bottom: 20px; }
 .mt20 { margin-top: 20px; }
 .mt10 { margin-top: 10px; }
+
+.post_all { display:inline;}
+
+.flc:after {
+  content: "."; 
+  display: block; 
+  height: 0; 
+  font-size:0;	
+  clear: both; 
+  visibility:hidden;
+}
+	
+.flc {display: inline-block;} 
