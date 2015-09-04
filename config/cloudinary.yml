@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: hktdeobk2
+  cloud_name: "hktdeobk2"
   api_key: '732481223217158'
-  api_secret: d3LsCimvXQItaK_2N-rXUAxNJ34
+  api_secret: "d3LsCimvXQItaK_2N-rXUAxNJ34"
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: hktdeobk2
+  cloud_name: "hktdeobk2"
   api_key: '732481223217158'
-  api_secret: d3LsCimvXQItaK_2N-rXUAxNJ34
+  api_secret: "d3LsCimvXQItaK_2N-rXUAxNJ34"
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: hktdeobk2
+  cloud_name: "hktdeobk2"
   api_key: '732481223217158'
-  api_secret: d3LsCimvXQItaK_2N-rXUAxNJ34
+  api_secret: "d3LsCimvXQItaK_2N-rXUAxNJ34"
   enhance_image_tag: true
   static_image_support: false
