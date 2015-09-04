@@ -1,5 +1,5 @@
 <% if user.image? %>
-    <%= link_to image_tag(user.image_url(:thumb), size: 50, :class => "gravatar" ), user %>
+    <%= link_to image_tag(user.image_url(:thumb), size: "50", :class => "gravatar" ), user %>
 <% else %>
-    <%= link_to gravatar_for(user, size: 50, :class => "gravatar" ), user %>
+    <%= link_to gravatar_for(user, size: "50", :class => "gravatar" ), user %>
 <% end %>
