@@ -30,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'cloudinary'
 gem "mini_magick"
+gem 'heroku'
 # gem 'rmagick', '2.15.3'
 
 # Use Unicorn as the app server
